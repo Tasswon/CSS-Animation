@@ -1,0 +1,99 @@
+#stars {
+    position:absolute;
+    top: 30px;
+    background-image: url(img/stars.gif);
+    width: 1300px;
+    height: 530px;
+    z-index: 1;
+    animation: reveal linear 10s infinite;
+    opacity: 0;
+}
+
+@keyframes reveal {
+    0%{
+       color:transparent;
+       opacity: 0;
+    }
+    25% {
+        color:transparent;
+        opacity: 0.25;
+    }
+    50% {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        opacity: 1;
+    }
+    75% {
+        text-align: center;
+        font-size: 30px;
+        opacity: 0.25;
+    }
+    100%{
+        text-align: center;
+        font-size: 30px;
+        opacity: 0;
+    }
+}
+
+#container {
+    width:1300px;
+    height:700px;
+    overflow:hidden;
+    z-index: 0;
+}
+
+#background {
+    position:relative;
+    background: url(img/Background.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 2800px;
+    height: 700px;
+    animation: background-move linear 10s infinite;
+}
+
+@keyframes background-move {
+    0%{
+        right: 0px;
+        filter: brightness(1.25);
+    }
+    25% {
+        filter:brightness(0.5);
+    }
+    50% {
+        filter:brightness(0);
+    }
+    75% {
+        filter:brightness(0);
+    }
+    100%{
+        right: 1230px; filter:brightness(1.25);
+    }
+}
+
+#spriteHolder {
+    position: absolute;
+    top: 385px;
+    left: 400px;
+    width: 108px;
+    height: 225px;
+    overflow:hidden;
+    z-index: 2;
+}
+
+#sprite {
+    animation: sprite-run 1s steps(8) infinite;
+}
+
+@keyframes sprite-run {
+    0% {
+        position:relative; 
+        left: 0px; 
+    }
+    
+    100% {
+        position:relative; 
+        left: -850px;
+    }
+}
